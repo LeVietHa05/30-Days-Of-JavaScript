@@ -10,7 +10,20 @@
 	<h2>Web Storage</h2>
 
 	<script src="./scripts/main.js"></script>
-
+	<script>
+		if (localStorage.getItem("temp") == undefined) {
+			console.log("no data in storage")
+			fetch('https://api.openweathermap.org/data/2.5/weather?lat=21.034228352457728&lon=105.83445918032695&appid=f9084163f4e6a9196277165f10be0382')
+				.then(res => res.json())
+				.then(data => {
+					console.log(data)
+					localStorage.setItem("temp", data.main.temp)
+				})
+		} else {
+			console.log("found data in localstorage")
+			console.log(localStorage.getItem("temp"))
+		}
+	</script>
 </body>
 
 </html>

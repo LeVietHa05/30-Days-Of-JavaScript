@@ -19,8 +19,53 @@
 			<li>30DaysOfMachineLearning Challenge Coming</li>
 		</ul>
 	</div>
+	<input type="number" id="num1">
+	<input type="number" id="num2">
+	<div id="result"></div>
+	<button id="confirm_btn">enter</button>
+
+	<select name="" id="test">
+		<option value="none">123</option>
+		<option value="plus">223</option>
+		<option value="minus">323</option>
+		<option value="div">423</option>
+		<option value="mul">523</option>
+	</select>
+
 	<script src="./scripts/main.js"></script>
 
+	<script>
+		let in1 = document.querySelector("#num1")
+		let in2 = document.querySelector("#num2")
+		let confirm_btn= document.querySelector("#confirm_btn")
+		let result= document.querySelector("#result")
+
+		confirm_btn.addEventListener("click", function () {
+			let val1 = +in1.value
+			let val2 = +in2.value
+			result.innerHTML = a();
+		})
+
+
+		let test_select = document.querySelector("#test"); 
+
+		// fetch("https://catfact.ninja/breeds")
+		// 	.then(res => res.json())
+		// 	.then(data => {
+		// 		let ul = document.createElement('ul')
+		// 		data.data.forEach(e => {
+		// 			let li = document.createElement('li')
+		// 			li.textContent = e.breed;
+		// 			li.style.color = 'red'
+		// 			ul.appendChild(li)
+		// 		})
+		// 		document.body.appendChild(ul);
+		// 	})
+		function a () {
+			return `<div> abc</div>`
+		}
+	</script>
 </body>
+
 
 </html>
